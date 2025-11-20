@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Rosette AVITSARA",
     exam: "BACC Série D - 2021",
-    mention: "Très Bien",
+    mention: "Assez Bien",
     text: "Grâce aux professeurs de CP2A, j'ai pu comprendre les mathématiques et la physique d'une manière totalement nouvelle. Leur méthode d'enseignement est exceptionnelle !",
     rating: 5,
   },
@@ -122,8 +122,10 @@ const Testimonials = () => {
               <p className="text-sm text-muted-foreground">Taux de réussite</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-secondary">15+</p>
-              <p className="text-sm text-muted-foreground">Mentions TB/année</p>
+              <p className="text-3xl font-bold text-secondary">10+</p>
+              <p className="text-sm text-muted-foreground">
+                Mentions Bien/année
+              </p>
             </div>
             <div>
               <p className="text-3xl font-bold text-cp2a-green">100+</p>
