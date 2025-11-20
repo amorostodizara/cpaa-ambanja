@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Jaune vibrant - couleur principale CP2A */
+    --primary: 60 100% 50%;
+    --primary-foreground: 220 15% 20%;
+
+    /* Vert croissance */
+    --secondary: 92 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Bleu clair confiance */
+    --accent: 218 60% 90%;
+    --accent-foreground: 220 15% 20%;
+
+    --muted: 218 30% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 218 30% 90%;
+    --input: 218 30% 90%;
+    --ring: 60 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Couleurs personnalisées CP2A */
+    --cp2a-yellow: 60 100% 50%;
+    --cp2a-green: 92 60% 55%;
+    --cp2a-blue: 218 60% 90%;
+    --cp2a-dark: 220 15% 20%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(60 100% 50% / 0.95),
+      hsl(92 60% 55% / 0.95)
+    );
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(218 60% 98%));
+
+    /* Shadows */
+    --shadow-yellow: 0 10px 40px -10px hsl(60 100% 50% / 0.3);
+    --shadow-green: 0 10px 40px -10px hsl(92 60% 55% / 0.3);
+    --shadow-soft: 0 4px 20px -2px hsl(220 15% 20% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 60 100% 50%;
+    --primary-foreground: 220 15% 20%;
+
+    --secondary: 92 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 218 40% 30%;
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 60 100% 50%;
+
+    --cp2a-yellow: 60 100% 50%;
+    --cp2a-green: 92 60% 55%;
+    --cp2a-blue: 218 40% 30%;
+    --cp2a-dark: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
