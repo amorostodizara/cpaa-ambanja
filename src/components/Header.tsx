@@ -85,7 +85,7 @@ const Header = () => {
               onClick={() => scrollToSection("formations")}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
-              Formations
+              Cours
             </button>
             <button
               onClick={() => scrollToSection("temoignages")}
