@@ -5,7 +5,7 @@ import { Badge } from "./ui/badge";
 const testimonials = [
   {
     name: "Rosette AVITSARA",
-    exam: "BACC Série D - 2024",
+    exam: "BACC Série D - 2021",
     mention: "Très Bien",
     text: "Grâce aux professeurs de CP2A, j'ai pu comprendre les mathématiques et la physique d'une manière totalement nouvelle. Leur méthode d'enseignement est exceptionnelle !",
     rating: 5,
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     name: "Amoros TODIZARA",
-    exam: "BACC Série S - 2023",
+    exam: "BACC Série S - 2021",
     mention: "Bien",
     text: "Les travaux pratiques et les exercices proposés par CP2A m'ont parfaitement préparé aux épreuves du BAC. Une équipe pédagogique au top !",
     rating: 5,
