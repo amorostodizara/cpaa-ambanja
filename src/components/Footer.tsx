@@ -1,4 +1,4 @@
-import { GraduationCap, Heart } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -49,9 +49,7 @@ const Footer = () => {
             © {new Date().getFullYear()} COURS CP2A - Tous droits réservés
             <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1">
-              Créé avec{" "}
-              <Heart className="text-red-500" size={14} fill="currentColor" />{" "}
-              pour la réussite de nos élèves - Amoros TODIZARA
+              Créé par Amoros TODIZARA nos anciens élèves
             </span>
           </p>
         </div>
