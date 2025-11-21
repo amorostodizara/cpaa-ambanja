@@ -1,9 +1,36 @@
-import { Facebook, Phone, MapPin, Clock, Calendar } from "lucide-react";
+import { Phone, MapPin, Mail, Clock, Calendar, Facebook } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 
 const Contact = () => {
+  function getUniversalEmailLink() {
+    const email = "nrandriamifidisoa@gmail.com";
+    const subject = "Demande d'Information Cours CP2A";
+
+    const encodedSubject = encodeURIComponent(subject);
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      return `mailto:${email}?subject=${encodedSubject}`;
+    }
+
+    if (window.location.href.includes("mail.google.com")) {
+      return `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}`;
+    }
+
+    if (window.location.href.includes("outlook.com")) {
+      return `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${encodedSubject}`;
+    }
+
+    if (window.location.href.includes("mail.yahoo.com")) {
+      return `https://compose.mail.yahoo.com/?to=${email}&subject=${encodedSubject}`;
+    }
+
+    return `mailto:${email}?subject=${encodedSubject}`;
+  }
+
   return (
     <section id="contact" className="py-20 bg-gradient-hero">
       <div className="container mx-auto px-4">
@@ -25,18 +52,18 @@ const Contact = () => {
           <Card className="shadow-soft border-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-2xl">
-                <Phone className="text-primary" size={28} />
+                <Phone className="text-secondary" size={28} />
                 Téléphone
               </CardTitle>
             </CardHeader>
             <CardContent>
               <a
-                href="https://wa.me/261324964914"
+                href="https://wa.me/261327597045"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+                className="text-2xl font-bold text-secondary hover:text-primary/80 transition-colors"
               >
-                032 49 649 14
+                032 75 970 45
               </a>
               <p className="text-muted-foreground mt-2">
                 Contactez-nous sur WhatsApp pour toute information
@@ -118,7 +145,6 @@ const Contact = () => {
             </CardContent>
           </Card>
         </div>
-
         <div className="mt-12 text-center">
           <Card className="max-w-2xl mx-auto shadow-yellow border-2 border-primary bg-background">
             <CardContent className="pt-8 pb-8">
@@ -130,17 +156,19 @@ const Contact = () => {
                 questions concernant nos formations, les modalités d'inscription
                 et les tarifs.
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-yellow"
+                  className=" bg-primary text-primary-foreground hover:bg-primary/90 shadow-yellow"
                   asChild
                 >
-                  <a href="tel:261324964914">
-                    <Phone className="mr-2" size={20} />
+                  <a href="tel:0327597045">
+                    <Phone className="mr-0" size={20} />
                     Appeler maintenant
                   </a>
                 </Button>
+
                 <Button
                   size="lg"
                   variant="outline"
@@ -152,8 +180,24 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Facebook className="mr-2" size={20} />
+                    <Facebook className="mr-0" size={20} />
                     Message Facebook
+                  </a>
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-[#EA4335] text-[#EA4335] hover:bg-[#EA4335] hover:text-white"
+                  asChild
+                >
+                  <a
+                    href={getUniversalEmailLink()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Mail className="mr-0" size={20} />
+                    Envoyer email
                   </a>
                 </Button>
               </div>
