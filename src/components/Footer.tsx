@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-4 text-primary">Formations</h4>
+            <h4 className="font-bold text-lg mb-4 text-primary">Cours</h4>
             <ul className="space-y-2 text-white/80 text-sm">
               <li>• Préparation BEPC</li>
               <li>• BAC Série A - Littérature</li>
